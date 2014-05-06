@@ -7,6 +7,9 @@ package com.lewissa.jhano.logicanegocio.tdd;
 
 import com.lewissa.jhano.cliente.cCliente;
 import com.lewissa.jhano.cliente.cTransaccionCliente;
+import com.lewissa.jhano.utilidades.cValidaciones;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import junit.framework.*;
 
 /**
@@ -140,7 +143,7 @@ public class cTestTransaccionCliente extends TestCase {
         flag = cliCliente.ingresarCliente(datDatosCliente);
         assertFalse(flag);
     }
-
+   
     public static Test suite() {
         return new TestSuite(cTestTransaccionCliente.class);
     }

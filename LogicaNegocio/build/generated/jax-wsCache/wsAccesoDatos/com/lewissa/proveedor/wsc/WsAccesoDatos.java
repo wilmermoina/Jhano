@@ -32,23 +32,11 @@ public interface WsAccesoDatos {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "actualizaBase", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.ActualizaBase")
-    @ResponseWrapper(localName = "actualizaBaseResponse", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.ActualizaBaseResponse")
-    @Action(input = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/actualizaBaseRequest", output = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/actualizaBaseResponse")
-    public Boolean actualizaBase(
+    @RequestWrapper(localName = "actualizarDataBase", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.ActualizarDataBase")
+    @ResponseWrapper(localName = "actualizarDataBaseResponse", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.ActualizarDataBaseResponse")
+    @Action(input = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/actualizarDataBaseRequest", output = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/actualizarDataBaseResponse")
+    public Boolean actualizarDataBase(
         @WebParam(name = "strSql", targetNamespace = "")
         String strSql);
-
-    /**
-     * 
-     * @return
-     *     returns java.lang.Boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "wsTestConexion", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.WsTestConexion")
-    @ResponseWrapper(localName = "wsTestConexionResponse", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.WsTestConexionResponse")
-    @Action(input = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/wsTestConexionRequest", output = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/wsTestConexionResponse")
-    public Boolean wsTestConexion();
 
 }

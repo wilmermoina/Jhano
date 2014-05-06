@@ -17,15 +17,6 @@ import javax.jws.WebParam;
 @WebService(serviceName = "wsAccesoDatos")
 public class wsAccesoDatos {
 
-
-    
-    @WebMethod(operationName = "wsTestConexion")
-    public Boolean wsTestConexion() {
-        //TODO write your implementation code here:
-        cAccesoDatos accTest = new cAccesoDatos();
-        return accTest.conectarDataBase();
-    }
-
     /**
      * Actualizar Base de Datos Servicio Web
      * @author Wilmer Moina, Esteban Borja
@@ -37,7 +28,7 @@ public class wsAccesoDatos {
      * @param strSql, String que contiene la sentencia SQL a ejecutar.
      * @return flag1, Booleano que retorna confirmacion de ingreso de los datos.
      */
-    @WebMethod(operationName = "actualizaBase")
+    @WebMethod(operationName = "actualizarDataBase")
     public Boolean actualizarDataBase(@WebParam(name = "strSql") String strSql) {
         Boolean flag1 = false; // revisa la respuesta de la base
         Boolean flag2 = false; // revisa la conexion

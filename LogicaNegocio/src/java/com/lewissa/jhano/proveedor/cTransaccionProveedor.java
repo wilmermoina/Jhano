@@ -19,6 +19,6 @@ public class cTransaccionProveedor {
         strSqlIngreso = "INSERT INTO proveedor VALUES ('"+datDatos.getId()+"', '"+datDatos.getNombreFiscal()+"'"
                 + ", '"+datDatos.getNombreComercial()+"', '"+datDatos.getDireccion()+"', '"+datDatos.getConvencional()+"'"
                 + ", '"+datDatos.getCelular()+"', '"+datDatos.getCorreo()+"')";
-        return flag.actualizaBase(strSqlIngreso);
+        return flag.actualizarDataBase(strSqlIngreso);
     }  
 }

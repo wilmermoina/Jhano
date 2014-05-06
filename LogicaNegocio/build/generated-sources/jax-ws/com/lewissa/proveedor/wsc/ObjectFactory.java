@@ -24,10 +24,8 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _WsTestConexion_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "wsTestConexion");
-    private final static QName _WsTestConexionResponse_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "wsTestConexionResponse");
-    private final static QName _ActualizaBaseResponse_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "actualizaBaseResponse");
-    private final static QName _ActualizaBase_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "actualizaBase");
+    private final static QName _ActualizarDataBase_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "actualizarDataBase");
+    private final static QName _ActualizarDataBaseResponse_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "actualizarDataBaseResponse");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.lewissa.proveedor.wsc
@@ -37,71 +35,37 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link ActualizaBase }
+     * Create an instance of {@link ActualizarDataBaseResponse }
      * 
      */
-    public ActualizaBase createActualizaBase() {
-        return new ActualizaBase();
+    public ActualizarDataBaseResponse createActualizarDataBaseResponse() {
+        return new ActualizarDataBaseResponse();
     }
 
     /**
-     * Create an instance of {@link ActualizaBaseResponse }
+     * Create an instance of {@link ActualizarDataBase }
      * 
      */
-    public ActualizaBaseResponse createActualizaBaseResponse() {
-        return new ActualizaBaseResponse();
+    public ActualizarDataBase createActualizarDataBase() {
+        return new ActualizarDataBase();
     }
 
     /**
-     * Create an instance of {@link WsTestConexion }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ActualizarDataBase }{@code >}}
      * 
      */
-    public WsTestConexion createWsTestConexion() {
-        return new WsTestConexion();
+    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "actualizarDataBase")
+    public JAXBElement<ActualizarDataBase> createActualizarDataBase(ActualizarDataBase value) {
+        return new JAXBElement<ActualizarDataBase>(_ActualizarDataBase_QNAME, ActualizarDataBase.class, null, value);
     }
 
     /**
-     * Create an instance of {@link WsTestConexionResponse }
+     * Create an instance of {@link JAXBElement }{@code <}{@link ActualizarDataBaseResponse }{@code >}}
      * 
      */
-    public WsTestConexionResponse createWsTestConexionResponse() {
-        return new WsTestConexionResponse();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link WsTestConexion }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "wsTestConexion")
-    public JAXBElement<WsTestConexion> createWsTestConexion(WsTestConexion value) {
-        return new JAXBElement<WsTestConexion>(_WsTestConexion_QNAME, WsTestConexion.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link WsTestConexionResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "wsTestConexionResponse")
-    public JAXBElement<WsTestConexionResponse> createWsTestConexionResponse(WsTestConexionResponse value) {
-        return new JAXBElement<WsTestConexionResponse>(_WsTestConexionResponse_QNAME, WsTestConexionResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ActualizaBaseResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "actualizaBaseResponse")
-    public JAXBElement<ActualizaBaseResponse> createActualizaBaseResponse(ActualizaBaseResponse value) {
-        return new JAXBElement<ActualizaBaseResponse>(_ActualizaBaseResponse_QNAME, ActualizaBaseResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ActualizaBase }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "actualizaBase")
-    public JAXBElement<ActualizaBase> createActualizaBase(ActualizaBase value) {
-        return new JAXBElement<ActualizaBase>(_ActualizaBase_QNAME, ActualizaBase.class, null, value);
+    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "actualizarDataBaseResponse")
+    public JAXBElement<ActualizarDataBaseResponse> createActualizarDataBaseResponse(ActualizarDataBaseResponse value) {
+        return new JAXBElement<ActualizarDataBaseResponse>(_ActualizarDataBaseResponse_QNAME, ActualizarDataBaseResponse.class, null, value);
     }
 
 }

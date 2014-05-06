@@ -3,20 +3,21 @@ package com.lewissa.proveedor.wsc;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Clase Java para actualizaBase complex type.
+ * <p>Clase Java para actualizarDataBaseResponse complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="actualizaBase">
+ * &lt;complexType name="actualizarDataBaseResponse">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="strSql" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *         &lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}boolean" minOccurs="0"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -26,35 +27,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "actualizaBase", propOrder = {
-    "strSql"
+@XmlType(name = "actualizarDataBaseResponse", propOrder = {
+    "_return"
 })
-public class ActualizaBase {
+public class ActualizarDataBaseResponse {
 
-    protected String strSql;
+    @XmlElement(name = "return")
+    protected Boolean _return;
 
     /**
-     * Obtiene el valor de la propiedad strSql.
+     * Obtiene el valor de la propiedad return.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
      */
-    public String getStrSql() {
-        return strSql;
+    public Boolean isReturn() {
+        return _return;
     }
 
     /**
-     * Define el valor de la propiedad strSql.
+     * Define el valor de la propiedad return.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Boolean }
      *     
      */
-    public void setStrSql(String value) {
-        this.strSql = value;
+    public void setReturn(Boolean value) {
+        this._return = value;
     }
 
 }

@@ -12,6 +12,9 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 import com.lewissa.jhano.utilidades.cConstantes;
+import com.sun.rowset.WebRowSetImpl;
+import java.io.StringWriter;
+import javax.jws.WebService;
 
 /**
  *
@@ -73,25 +76,29 @@ public class cAccesoDatos {
      *
      * @param strParametroQuery, String que contiene la sentencia SQL a
      * ejecuatrse
-     * @return resResultadoConsulta, ResulSet que contiene el resultado de la
-     * consulta
-     * @throws ClassNotFoundException Exepcion de calse no encontrada
-     * @throws SQLException Exepcion de sintaxis SQL incorrecta
+     * @return strResultadoConsulta, String que contiene el resultado de la
+     * consulta en formato XML
      */
-    public ResultSet consultarDataBase(String strParametroQuery) throws ClassNotFoundException, SQLException {
+    public String consultarDataBase(String strParametroQuery){
+        String strResultadoConsulta = null;
         ResultSet resResultadoConsulta = null;
-        Statement staCreaQuery = null;
+        Statement stmCreaQuery = null;
         try {
             if (this.conConexion != null) {
-                staCreaQuery = this.conConexion.createStatement();
-                resResultadoConsulta = staCreaQuery.executeQuery(strParametroQuery);
+                stmCreaQuery = this.conConexion.createStatement();
+                resResultadoConsulta = stmCreaQuery.executeQuery(strParametroQuery);
+                WebRowSetImpl wrs = new WebRowSetImpl();
+                wrs.populate(resResultadoConsulta);
+                StringWriter sw = new StringWriter();
+                wrs.writeXml(sw);
+                strResultadoConsulta = sw.toString();
+                stmCreaQuery.execute("END");
+                stmCreaQuery.close();
             }
-
         } catch (SQLException e) {
             System.out.println(e.getMessage());
         } finally {
-            staCreaQuery.close();
-            return resResultadoConsulta;
+            return strResultadoConsulta;
         }
 
     }
@@ -105,7 +112,7 @@ public class cAccesoDatos {
      * ejecucion del metodo
      */
     public Boolean actualizarDataBase(String strQuery) {
-        Boolean booResultado = null;
+        Boolean booResultado = false;
         Statement staCreaQuery = null;
         try {
             if (this.conConexion != null) {

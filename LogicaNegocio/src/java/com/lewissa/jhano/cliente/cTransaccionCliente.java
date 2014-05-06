@@ -25,6 +25,6 @@ public class cTransaccionCliente {
         strSqlIngreso = "INSERT INTO cliente VALUES ('" + datDatos.getStrIdCliente() + "', '" + datDatos.getStrNombreFiscal() + "'"
                 + ", '" + datDatos.getStrNombreComercial() + "', '" + datDatos.getStrDireccion() + "', '" + datDatos.getStrConvencional() + "'"
                 + ", '" + datDatos.getStrCelular() + "', '" + datDatos.getStrCorreo() + "', '" + datDatos.getStrTipoCliente() + "')";
-        return flag.actualizaBase(strSqlIngreso);
+        return flag.actualizarDataBase(strSqlIngreso);
     }
 }

@@ -18,16 +18,7 @@ import javax.jws.WebParam;
 public class wsAccesoDatos {
 
 
-    /**
-     * Test de Conexión
-     * @author Wilmer Moina, Juan Moyano
-     * @version 1.0 02-05-2014
-     * 
-     * Método que permite realizar una prueba de conexión con la base de datos.
-     * 
-     * @return accTest.conectarDataBase , Booleano que contiene la confirmacion
-     * de conexión
-     */
+    
     @WebMethod(operationName = "wsTestConexion")
     public Boolean wsTestConexion() {
         //TODO write your implementation code here:
@@ -47,7 +38,7 @@ public class wsAccesoDatos {
      * @return flag1, Booleano que retorna confirmacion de ingreso de los datos.
      */
     @WebMethod(operationName = "actualizaBase")
-    public Boolean actualizaBase(@WebParam(name = "strSql") String strSql) {
+    public Boolean actualizarDataBase(@WebParam(name = "strSql") String strSql) {
         Boolean flag1 = false; // revisa la respuesta de la base
         Boolean flag2 = false; // revisa la conexion
         cAccesoDatos accConexion = new cAccesoDatos();

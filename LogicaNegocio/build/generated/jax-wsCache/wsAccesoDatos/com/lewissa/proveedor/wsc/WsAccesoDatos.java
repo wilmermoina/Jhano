@@ -32,10 +32,10 @@ public interface WsAccesoDatos {
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "insertarProveedor", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.InsertarProveedor")
-    @ResponseWrapper(localName = "insertarProveedorResponse", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.InsertarProveedorResponse")
-    @Action(input = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/insertarProveedorRequest", output = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/insertarProveedorResponse")
-    public Boolean insertarProveedor(
+    @RequestWrapper(localName = "actualizaBase", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.ActualizaBase")
+    @ResponseWrapper(localName = "actualizaBaseResponse", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.ActualizaBaseResponse")
+    @Action(input = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/actualizaBaseRequest", output = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/actualizaBaseResponse")
+    public Boolean actualizaBase(
         @WebParam(name = "strSql", targetNamespace = "")
         String strSql);
 
@@ -50,20 +50,5 @@ public interface WsAccesoDatos {
     @ResponseWrapper(localName = "wsTestConexionResponse", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.WsTestConexionResponse")
     @Action(input = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/wsTestConexionRequest", output = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/wsTestConexionResponse")
     public Boolean wsTestConexion();
-
-    /**
-     * 
-     * @param strSql
-     * @return
-     *     returns java.lang.Boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "insertarCliente", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.InsertarCliente")
-    @ResponseWrapper(localName = "insertarClienteResponse", targetNamespace = "http://ws.accesodatos.jhano.lewissa.com/", className = "com.lewissa.proveedor.wsc.InsertarClienteResponse")
-    @Action(input = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/insertarClienteRequest", output = "http://ws.accesodatos.jhano.lewissa.com/wsAccesoDatos/insertarClienteResponse")
-    public Boolean insertarCliente(
-        @WebParam(name = "strSql", targetNamespace = "")
-        String strSql);
 
 }

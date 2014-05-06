@@ -11,7 +11,7 @@ package com.lewissa.jhano.utilidades;
  * @author Usuario
  */
 public class cConstantes {
-    public static final String URL="jdbc:postgresql://192.168.1.2:5432/Jhano";
+    public static final String URL="jdbc:postgresql://10.0.1.1:5432/bd_Jhano";
     public static final String DRIVER="org.postgresql.Driver";
     public static final String USER="dba_Computech";
     public static final String PASSWORD="123456";

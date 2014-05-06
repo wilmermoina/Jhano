@@ -24,12 +24,10 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _InsertarProveedor_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "insertarProveedor");
     private final static QName _WsTestConexion_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "wsTestConexion");
     private final static QName _WsTestConexionResponse_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "wsTestConexionResponse");
-    private final static QName _InsertarCliente_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "insertarCliente");
-    private final static QName _InsertarClienteResponse_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "insertarClienteResponse");
-    private final static QName _InsertarProveedorResponse_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "insertarProveedorResponse");
+    private final static QName _ActualizaBaseResponse_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "actualizaBaseResponse");
+    private final static QName _ActualizaBase_QNAME = new QName("http://ws.accesodatos.jhano.lewissa.com/", "actualizaBase");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: com.lewissa.proveedor.wsc
@@ -39,27 +37,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link InsertarProveedorResponse }
+     * Create an instance of {@link ActualizaBase }
      * 
      */
-    public InsertarProveedorResponse createInsertarProveedorResponse() {
-        return new InsertarProveedorResponse();
+    public ActualizaBase createActualizaBase() {
+        return new ActualizaBase();
     }
 
     /**
-     * Create an instance of {@link InsertarClienteResponse }
+     * Create an instance of {@link ActualizaBaseResponse }
      * 
      */
-    public InsertarClienteResponse createInsertarClienteResponse() {
-        return new InsertarClienteResponse();
-    }
-
-    /**
-     * Create an instance of {@link InsertarCliente }
-     * 
-     */
-    public InsertarCliente createInsertarCliente() {
-        return new InsertarCliente();
+    public ActualizaBaseResponse createActualizaBaseResponse() {
+        return new ActualizaBaseResponse();
     }
 
     /**
@@ -71,28 +61,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link InsertarProveedor }
-     * 
-     */
-    public InsertarProveedor createInsertarProveedor() {
-        return new InsertarProveedor();
-    }
-
-    /**
      * Create an instance of {@link WsTestConexionResponse }
      * 
      */
     public WsTestConexionResponse createWsTestConexionResponse() {
         return new WsTestConexionResponse();
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarProveedor }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "insertarProveedor")
-    public JAXBElement<InsertarProveedor> createInsertarProveedor(InsertarProveedor value) {
-        return new JAXBElement<InsertarProveedor>(_InsertarProveedor_QNAME, InsertarProveedor.class, null, value);
     }
 
     /**
@@ -114,30 +87,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarCliente }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ActualizaBaseResponse }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "insertarCliente")
-    public JAXBElement<InsertarCliente> createInsertarCliente(InsertarCliente value) {
-        return new JAXBElement<InsertarCliente>(_InsertarCliente_QNAME, InsertarCliente.class, null, value);
+    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "actualizaBaseResponse")
+    public JAXBElement<ActualizaBaseResponse> createActualizaBaseResponse(ActualizaBaseResponse value) {
+        return new JAXBElement<ActualizaBaseResponse>(_ActualizaBaseResponse_QNAME, ActualizaBaseResponse.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarClienteResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link ActualizaBase }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "insertarClienteResponse")
-    public JAXBElement<InsertarClienteResponse> createInsertarClienteResponse(InsertarClienteResponse value) {
-        return new JAXBElement<InsertarClienteResponse>(_InsertarClienteResponse_QNAME, InsertarClienteResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link InsertarProveedorResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "insertarProveedorResponse")
-    public JAXBElement<InsertarProveedorResponse> createInsertarProveedorResponse(InsertarProveedorResponse value) {
-        return new JAXBElement<InsertarProveedorResponse>(_InsertarProveedorResponse_QNAME, InsertarProveedorResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://ws.accesodatos.jhano.lewissa.com/", name = "actualizaBase")
+    public JAXBElement<ActualizaBase> createActualizaBase(ActualizaBase value) {
+        return new JAXBElement<ActualizaBase>(_ActualizaBase_QNAME, ActualizaBase.class, null, value);
     }
 
 }

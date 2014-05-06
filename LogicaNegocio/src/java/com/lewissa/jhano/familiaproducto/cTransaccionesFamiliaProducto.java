@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *Esta clae permite realizar las transacciones(Inserta, modificar, eliminar y 
+ *consultar) de la familia de producto
  */
 
 package com.lewissa.jhano.familiaproducto;
@@ -12,6 +11,12 @@ import com.lewissa.jhano.familiaproducto.cFamiliaProducto;
  * @author Usuario
  */
 public class cTransaccionesFamiliaProducto {
+    
+    /**
+     * Este metodo que permite Insertar un Objeto Familia de Producto
+     * @param familiaProducto, Objeto que represnta a la tabla Familia Producto
+     * @return booResultado, Boolean que retorna la confimacion de la realizacion del metodo
+     */
     
     public Boolean insertarFamiliaProducto(cFamiliaProducto familiaProducto){
         Boolean booResultado=false;

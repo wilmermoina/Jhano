@@ -6,11 +6,21 @@
 package com.lewissa.jhano.proveedor;
 
 /**
- *
- * @author eborja
+ *Clase Transección de Proveedor
+ * Gestiona el comportamiento de la clase cCliente, mediante los métodos creados
+ * 
+ * @author Miguel Mejía, Juan Moyano
+ * @version 1.0 06/05/2014
  */
 public class cTransaccionProveedor {
 
+    /**
+     * Ingresar Proveedor
+     * Método que construye y envia la sentecia SQL para el ingreso de proveedores
+     * 
+     * @param datDatos, Objeto que represnta a la tabla Proveedor
+     * @return flag.actualizarDataBase, Boolean que retorna la confimacion de la realizacion del metodo
+     */
     public Boolean ingresarProveedor(cProveedor datDatos) {
         //cAccesoDatos accEjecutaQry=new cAccesoDatos();
         com.lewissa.proveedor.wsc.WsAccesoDatos_Service service = new com.lewissa.proveedor.wsc.WsAccesoDatos_Service();

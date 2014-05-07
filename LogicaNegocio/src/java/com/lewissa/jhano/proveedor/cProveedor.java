@@ -1,13 +1,13 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Esta clase represnta al objeto(tabla) Proveedor
  */
 package com.lewissa.jhano.proveedor;
 
 /**
  *
- * @author eborja
+ * Clase cProveedor
+ * @author Miguel Mejía, Juan Moyano
+ * @version 1.0 06/05/2014 
  */
 public class cProveedor {
 

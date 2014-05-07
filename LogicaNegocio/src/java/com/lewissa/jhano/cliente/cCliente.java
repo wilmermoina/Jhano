@@ -1,14 +1,14 @@
 package com.lewissa.jhano.cliente;
 
 /*
- * Esta cla represnta al objeto(tabla) FamiliaProducto
+ * Esta clase represnta al objeto(tabla) Cliente
  */
 
 
 
 /**
  * Clase cCliente
- * @author Fredy Janeta
+ * @author 
  * @version 1.0 06-05-2014
  */
 public class cCliente {

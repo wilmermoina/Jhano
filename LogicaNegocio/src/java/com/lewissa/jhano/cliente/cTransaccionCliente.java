@@ -10,9 +10,15 @@ import java.util.regex.Pattern;
  * Gestiona el comportamiento de la clase cCliente, mediante los métodos creados
  *
  * @version 1.0 03/05/2014
- * @author Wilmer Moina, Juan Moyano
+ * @author 
  */
 public class cTransaccionCliente {
+    
+    /**
+     * 
+     * @param datDatos
+     * @return 
+     */
 
     public Boolean ingresarCliente(cCliente datDatos) {
 

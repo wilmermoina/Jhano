@@ -10,7 +10,7 @@ import com.lewissa.jhano.familiaproducto.cFamiliaProducto;
  *
  * @author Usuario
  */
-public class cTransaccionesFamiliaProducto {
+public class cTransaccionFamiliaProducto {
     
     /**
      * Este metodo que permite Insertar un Objeto Familia de Producto

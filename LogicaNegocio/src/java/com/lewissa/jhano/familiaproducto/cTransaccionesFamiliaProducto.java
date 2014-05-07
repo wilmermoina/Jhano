@@ -15,7 +15,8 @@ public class cTransaccionesFamiliaProducto {
     /**
      * Este metodo que permite Insertar un Objeto Familia de Producto
      * @param familiaProducto, Objeto que represnta a la tabla Familia Producto
-     * @return booResultado, Boolean que retorna la confimacion de la realizacion del metodo
+     * @return booResultado, Boolean que retorna la confimacion de la realizacion del metodocls
+     * 
      */
     
     public Boolean insertarFamiliaProducto(cFamiliaProducto familiaProducto){

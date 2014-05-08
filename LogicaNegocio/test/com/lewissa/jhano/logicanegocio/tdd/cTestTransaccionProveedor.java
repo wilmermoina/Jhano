@@ -23,25 +23,37 @@ public class cTestTransaccionProveedor extends TestCase{
 
    // Este test prueba el ingreso de un proveedor
     public void testIngresarProveedor() {
+        cProveedor datDatos= new cProveedor();
         cTransaccionProveedor proProveedor = new cTransaccionProveedor();
-        cProveedor datDatosProveedor = new cProveedor();
-        Boolean flag;
+        //cProveedor datDatosProveedor = new cProveedor();
+        //Boolean flag;
         //INSERT INTO proveedor VALUES ('pv003', 'asdfg', 'jhbsdcbhd', 'kjdbkhbd', '2378628', '0984486880', 'agshdc@sjgdv.com')
-        datDatosProveedor.setId("pv019");
-        datDatosProveedor.setNombreFiscal("Prueba");
-        datDatosProveedor.setNombreComercial("Comercial");
-        datDatosProveedor.setDireccion("Direccion");
-        datDatosProveedor.setConvencional("2968473");
-        datDatosProveedor.setCelular("0987777283");
-        datDatosProveedor.setCorreo("asdfg@kk.com");
-        flag = proProveedor.ingresarProveedor(datDatosProveedor);
-        assertTrue(flag);
+        datDatos.setId("pv020");
+        datDatos.setNombreFiscal("Prueba");
+        datDatos.setNombreComercial("Comercial");
+        datDatos.setDireccion("Direccion");
+        datDatos.setConvencional("2968473");
+        datDatos.setCelular("0987777283");
+        datDatos.setCorreo("asdfg@kk.com");
+        //flag = proProveedor.ingresarProveedor(datDatosProveedor);
+        String strSqlIngreso;
+        strSqlIngreso = "INSERT INTO proveedor VALUES ('"+datDatos.getId()+"', '"+datDatos.getNombreFiscal()+"'"
+                + ", '"+datDatos.getNombreComercial()+"', '"+datDatos.getDireccion()+"', '"+datDatos.getConvencional()+"'"
+                + ", '"+datDatos.getCelular()+"', '"+datDatos.getCorreo()+"')";
+        //System.out.println(strSqlIngreso);
+        String resA = "INSERT INTO proveedor VALUES ('pv020', 'Prueba', 'Comercial', 'Direccion', '2968473', '0987777283', 'asdfg@kk.com')";
+        assertTrue(strSqlIngreso.equals(resA));//strSqlIngreso,         
     }
+    
+    
      public static Test suite() {
+
         return new TestSuite(cTestTransaccionProveedor.class);
     }
 
     public static void main(String[] args) {
         junit.textui.TestRunner.run(suite());
     }
+
+    
 }

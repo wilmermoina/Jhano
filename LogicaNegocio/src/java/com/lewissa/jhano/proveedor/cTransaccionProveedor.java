@@ -5,6 +5,8 @@
  */
 package com.lewissa.jhano.proveedor;
 
+import com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos_Service;
+
 /**
  *Clase Transección de Proveedor
  * Gestiona el comportamiento de la clase cCliente, mediante los métodos creados
@@ -23,8 +25,8 @@ public class cTransaccionProveedor {
      */
     public Boolean ingresarProveedor(cProveedor datDatos) {
         //cAccesoDatos accEjecutaQry=new cAccesoDatos();
-        com.lewissa.proveedor.wsc.WsAccesoDatos_Service service = new com.lewissa.proveedor.wsc.WsAccesoDatos_Service();
-        com.lewissa.proveedor.wsc.WsAccesoDatos flag = service.getWsAccesoDatosPort();
+        com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos_Service service = new WsAccesoDatos_Service();
+        com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos flag = service.getWsAccesoDatosPort();
         String strSqlIngreso;
         strSqlIngreso = "INSERT INTO proveedor VALUES ('"+datDatos.getId()+"', '"+datDatos.getNombreFiscal()+"'"
                 + ", '"+datDatos.getNombreComercial()+"', '"+datDatos.getDireccion()+"', '"+datDatos.getConvencional()+"'"

@@ -7,9 +7,6 @@ package com.lewissa.jhano.logicanegocio.tdd;
 
 import com.lewissa.jhano.cliente.cCliente;
 import com.lewissa.jhano.cliente.cTransaccionCliente;
-import com.lewissa.jhano.utilidades.cValidaciones;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import junit.framework.*;
 
 /**
@@ -34,6 +31,24 @@ public class cTestTransaccionCliente extends TestCase {
         datDatosCliente.setStrTipoCliente("tc001");
         flag = cliCliente.ingresarCliente(datDatosCliente);
         assertTrue(flag);
+    }
+    
+     public void testIngresarClienteVerificadorMalo() {
+        cTransaccionCliente cliCliente = new cTransaccionCliente();
+        cCliente datDatosCliente = new cCliente();
+        Boolean flag;
+        // INSERT INTO cliente VALUES ('cl002','Wilmer Moina2','Wilmer Moina2',
+        //'24 de Mayo','2607620','0994296010','wilmermoina@homtail.com','tc001')
+        datDatosCliente.setStrIdCliente("0604106861");
+        datDatosCliente.setStrNombreFiscal("Prueba");
+        datDatosCliente.setStrNombreComercial("Comercial");
+        datDatosCliente.setStrDireccion("Direccion");
+        datDatosCliente.setStrConvencional("2968473");
+        datDatosCliente.setStrCelular("0987777283");
+        datDatosCliente.setStrCorreo("asdfg@kk.com");
+        datDatosCliente.setStrTipoCliente("tc001");
+        flag = cliCliente.ingresarCliente(datDatosCliente);
+        assertFalse(flag);
     }
 
     public void testIngresarCliente1() {
@@ -138,6 +153,42 @@ public class cTestTransaccionCliente extends TestCase {
         datDatosCliente.setStrDireccion("Direccion");
         datDatosCliente.setStrConvencional("2947746");
         datDatosCliente.setStrCelular("qqqqqqqqqq");
+        datDatosCliente.setStrCorreo("asdfg@kk.com");
+        datDatosCliente.setStrTipoCliente("tc001");
+        flag = cliCliente.ingresarCliente(datDatosCliente);
+        assertFalse(flag);
+    }
+    
+    public void testIngresarClienteRuc() {
+        cTransaccionCliente cliCliente = new cTransaccionCliente();
+        cCliente datDatosCliente = new cCliente();
+        Boolean flag;
+        // INSERT INTO cliente VALUES ('cl002','Wilmer Moina2','Wilmer Moina2',
+        //'24 de Mayo','2607620','0994296010','wilmermoina@homtail.com','tc001')
+        datDatosCliente.setStrIdCliente("1234567890001");
+        datDatosCliente.setStrNombreFiscal("Prueba");
+        datDatosCliente.setStrNombreComercial("Comercial");
+        datDatosCliente.setStrDireccion("Direccion");
+        datDatosCliente.setStrConvencional("2947746");
+        datDatosCliente.setStrCelular("0987777283");
+        datDatosCliente.setStrCorreo("asdfg@kk.com");
+        datDatosCliente.setStrTipoCliente("tc001");
+        flag = cliCliente.ingresarCliente(datDatosCliente);
+        assertTrue(flag);
+    }
+    
+    public void testIngresarClienteRuc2() {
+        cTransaccionCliente cliCliente = new cTransaccionCliente();
+        cCliente datDatosCliente = new cCliente();
+        Boolean flag;
+        // INSERT INTO cliente VALUES ('cl002','Wilmer Moina2','Wilmer Moina2',
+        //'24 de Mayo','2607620','0994296010','wilmermoina@homtail.com','tc001')
+        datDatosCliente.setStrIdCliente("1234567890101");
+        datDatosCliente.setStrNombreFiscal("Prueba");
+        datDatosCliente.setStrNombreComercial("Comercial");
+        datDatosCliente.setStrDireccion("Direccion");
+        datDatosCliente.setStrConvencional("2947746");
+        datDatosCliente.setStrCelular("0987777283");
         datDatosCliente.setStrCorreo("asdfg@kk.com");
         datDatosCliente.setStrTipoCliente("tc001");
         flag = cliCliente.ingresarCliente(datDatosCliente);

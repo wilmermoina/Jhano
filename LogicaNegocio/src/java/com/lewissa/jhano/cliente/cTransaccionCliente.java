@@ -1,8 +1,9 @@
 package com.lewissa.jhano.cliente;
 
-import com.lewissa.jhano.utilidades.cValidaciones;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import com.lewissa.jhano.utilidades.cCedula;
+import com.lewissa.jhano.utilidades.cCorreo;
+import com.lewissa.jhano.utilidades.cRuc;
+import com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos_Service;
 
 /**
  * Clase Transacción de Clientes
@@ -10,27 +11,30 @@ import java.util.regex.Pattern;
  * Gestiona el comportamiento de la clase cCliente, mediante los métodos creados
  *
  * @version 1.0 03/05/2014
- * @author 
+ * @author
  */
 public class cTransaccionCliente {
-    
+
     /**
-     * 
+     *
      * @param datDatos
-     * @return 
+     * @return
      */
-
     public Boolean ingresarCliente(cCliente datDatos) {
-
-        com.lewissa.proveedor.wsc.WsAccesoDatos_Service service = new com.lewissa.proveedor.wsc.WsAccesoDatos_Service();
-        com.lewissa.proveedor.wsc.WsAccesoDatos flag = service.getWsAccesoDatosPort();
+        com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos_Service service = new WsAccesoDatos_Service();
+        com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos flag = service.getWsAccesoDatosPort();
         String strSqlIngreso;
         Boolean booFlag = false;
-        cValidaciones valCorreo = new cValidaciones();
-        booFlag = valCorreo.validaEmail(datDatos.getStrCorreo());
-        strSqlIngreso = "INSERT INTO cliente VALUES ('" + datDatos.getStrIdCliente() + "', '" + datDatos.getStrNombreFiscal() + "'"
-                + ", '" + datDatos.getStrNombreComercial() + "', '" + datDatos.getStrDireccion() + "', '" + datDatos.getStrConvencional() + "'"
-                + ", '" + datDatos.getStrCelular() + "', '" + datDatos.getStrCorreo() + "', '" + datDatos.getStrTipoCliente() + "')";
-        return flag.actualizarDataBase(strSqlIngreso);
+        cCedula cedCedula=new cCedula(datDatos.getStrIdCliente());
+        cRuc rucRuc=new cRuc(datDatos.getStrIdCliente());
+        cCorreo corCorreo=new cCorreo(datDatos.getStrCorreo());
+        if ((cedCedula.validaCedula() || rucRuc.validaRuc()) && corCorreo.validaEmail()) {
+            strSqlIngreso = "INSERT INTO cliente VALUES ('" + datDatos.getStrIdCliente() + "', '" + datDatos.getStrNombreFiscal() + "'"
+                    + ", '" + datDatos.getStrNombreComercial() + "', '" + datDatos.getStrDireccion() + "', '" + datDatos.getStrConvencional() + "'"
+                    + ", '" + datDatos.getStrCelular() + "', '" + datDatos.getStrCorreo() + "', '" + datDatos.getStrTipoCliente() + "')";
+            booFlag = flag.actualizarDataBase(strSqlIngreso);
+        }
+        return booFlag;
     }
+
 }

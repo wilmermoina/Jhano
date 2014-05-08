@@ -11,7 +11,6 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import com.lewissa.jhano.familiaproducto.cTransaccionFamiliaProducto;
 import com.lewissa.jhano.familiaproducto.cFamiliaProducto;
-import com.lewissa.jhano.familiaproducto.cFamiliaProducto;
 
 /**
  *

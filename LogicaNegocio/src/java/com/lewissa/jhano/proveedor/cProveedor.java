@@ -6,8 +6,9 @@ package com.lewissa.jhano.proveedor;
 /**
  *
  * Clase cProveedor
+ *
  * @author Miguel Mejía, Juan Moyano
- * @version 1.0 06/05/2014 
+ * @version 1.0 06/05/2014
  */
 public class cProveedor {
 
@@ -47,31 +48,31 @@ public class cProveedor {
         strCorreo = strEmail;
     }
 
-    String getId() {
+    public String getId() {
         return strIdProveedor;
     }
 
-    String getNombreFiscal() {
+    public String getNombreFiscal() {
         return strNombreFiscal;
     }
 
-    String getNombreComercial() {
+    public String getNombreComercial() {
         return strNombreComercial;
     }
 
-    String getDireccion() {
+    public String getDireccion() {
         return strDireccion;
     }
 
-    String getConvencional() {
+    public String getConvencional() {
         return strConvencional;
     }
 
-    String getCelular() {
+    public String getCelular() {
         return strCelular;
     }
 
-    String getCorreo() {
+    public String getCorreo() {
         return strCorreo;
     }
 

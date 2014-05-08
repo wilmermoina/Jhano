@@ -4,7 +4,7 @@
  */
 
 package com.lewissa.jhano.familiaproducto;
-import com.lewissa.jhano.familiaproducto.cFamiliaProducto;
+import com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos_Service;
 
 /**
  *
@@ -22,8 +22,8 @@ public class cTransaccionFamiliaProducto {
     public Boolean insertarFamiliaProducto(cFamiliaProducto familiaProducto){
         Boolean booResultado=false;
         String strQuery;
-        com.lewissa.proveedor.wsc.WsAccesoDatos_Service serviceAD = new com.lewissa.proveedor.wsc.WsAccesoDatos_Service();
-        com.lewissa.proveedor.wsc.WsAccesoDatos  serviceADPort = serviceAD.getWsAccesoDatosPort();
+        com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos_Service serviceAD = new WsAccesoDatos_Service();
+        com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos  serviceADPort = serviceAD.getWsAccesoDatosPort();
         strQuery = "INSERT INTO familiaproducto VALUES ('" + familiaProducto.getIntId()+ "', '" + familiaProducto.getStrDescripcion()+ "')";
         booResultado= serviceADPort.actualizarDataBase(strQuery);
         return booResultado;

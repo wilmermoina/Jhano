@@ -28,7 +28,7 @@
     </target>
     <target name="wsimport-client-wsAccesoDatos" depends="wsimport-init">
         <mkdir dir="${build.generated.dir}/jax-wsCache/wsAccesoDatos"/>
-        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsAccesoDatos" destdir="${build.generated.dir}/jax-wsCache/wsAccesoDatos" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/wsAccesoDatos/wsdl/localhost_8080/AccesoDatos/wsAccesoDatos.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AccesoDatos/wsAccesoDatos?WSDL" xnocompile="true" xendorsed="true" package="com.lewissa.proveedor.wsc">
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/wsAccesoDatos" destdir="${build.generated.dir}/jax-wsCache/wsAccesoDatos" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/wsAccesoDatos/wsdl/localhost_8080/AccesoDatos/wsAccesoDatos.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" fork="false" wsdlLocation="http://localhost:8080/AccesoDatos/wsAccesoDatos?WSDL" xnocompile="true" xendorsed="true" package="com.lewissa.jhano.wscAccesoDatos">
             <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/wsAccesoDatos/wsdl/localhost_8080/AccesoDatos/wsAccesoDatos.wsdl"/>
             <produces dir="${build.generated.dir}/jax-wsCache/wsAccesoDatos"/>
         </wsimport>
@@ -39,7 +39,7 @@
         </copy>
     </target>
     <target name="wsimport-client-clean-wsAccesoDatos" depends="-init-project">
-        <delete dir="${build.generated.sources.dir}/jax-ws/com/lewissa/proveedor/wsc"/>
+        <delete dir="${build.generated.sources.dir}/jax-ws/com/lewissa/jhano/wscAccesoDatos"/>
         <delete dir="${build.generated.dir}/jax-wsCache/wsAccesoDatos"/>
     </target>
     <target name="wsimport-client-generate" depends="wsimport-client-wsAccesoDatos"/>

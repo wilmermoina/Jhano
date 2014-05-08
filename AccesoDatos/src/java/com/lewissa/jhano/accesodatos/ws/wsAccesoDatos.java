@@ -19,30 +19,31 @@ public class wsAccesoDatos {
 
     /**
      * Actualizar Base de Datos Servicio Web
+     *
      * @author Wilmer Moina, Esteban Borja
      * @version 1.0 06-05-2014
-     * 
-     * Servicio web que llama a la conexion de base de datos y resliza una actualizacion
-     * en la base y retorna un bolleano.
-     * 
+     *
+     * Servicio web que llama a la conexion de base de datos y resliza una
+     * actualizacion en la base y retorna un bolleano.
+     *
      * @param strSql, String que contiene la sentencia SQL a ejecutar.
      * @return flag1, Booleano que retorna confirmacion de ingreso de los datos.
      */
     @WebMethod(operationName = "actualizarDataBase")
     public Boolean actualizarDataBase(@WebParam(name = "strSql") String strSql) {
-        Boolean flag1 = false; // revisa la respuesta de la base
-        Boolean flag2 = false; // revisa la conexion
+        Boolean booflag1 = false; // revisa la respuesta de la base
+        Boolean booflag2 = false; // revisa la conexion
         cAccesoDatos accConexion = new cAccesoDatos();
         if (!accConexion.conectarDataBase()) {
-            flag2 = false; //error en la conexion
+            booflag2 = false; //error en la conexion
         } else {
-            flag2 = true; // conexion correcta
-            flag1 = accConexion.actualizarDataBase(strSql);
-            if (flag1 == null) {
-                flag1 = false;
+            booflag2 = true; // conexion correcta
+            booflag1 = accConexion.actualizarDataBase(strSql);
+            if (booflag1 == null) {
+                booflag1 = false;
             }
         }
-        flag1 = (flag1.equals(true)) && (flag2.equals(true));
-        return flag1;
+        booflag1 = (booflag1.equals(true)) && (booflag2.equals(true));
+        return booflag1;
     }
 }

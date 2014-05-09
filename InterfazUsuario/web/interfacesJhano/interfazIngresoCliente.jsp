@@ -107,7 +107,7 @@
             </tr>
         </table>
 
-        <table bgcolor="#C0C0C0" width="100%" border="1">
+        <table bgcolor="#C0C0C0" width="100%" height="100%" border="1">
             <tr>
                 <td width="12%">
                     <table border="1" align="left">

@@ -81,6 +81,11 @@ public class cTestValidacionesUtilidades extends TestCase {
         Boolean booFlag = rucRuc.validaRuc();
         assertFalse(booFlag);
     }
+    public void testValidarRucErroneo2() {
+        cRuc rucRuc = new cRuc("06049498910011");
+        Boolean booFlag = rucRuc.validaRuc();
+        assertFalse(booFlag);
+    }
 
     public void testValidarRucLetra() {
         cRuc rucRuc = new cRuc("0604949a9001");

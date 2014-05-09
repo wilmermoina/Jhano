@@ -8,7 +8,7 @@ package com.lewissa.jhano.cliente;
 
 /**
  * Clase cCliente
- * @author 
+ * @author Estaban Borjas, Wilmer Moina.
  * @version 1.0 06-05-2014
  */
 public class cCliente {

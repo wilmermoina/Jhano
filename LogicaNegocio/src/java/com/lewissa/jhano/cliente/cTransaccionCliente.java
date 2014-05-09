@@ -16,18 +16,20 @@ import com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos_Service;
 public class cTransaccionCliente {
 
     /**
+     * Método que permite ingresar un cliente.
      *
-     * @param datDatos
-     * @return
+     * @param datDatos, contiene objeto tipo cliente a ser ingresado.
+     * @return Booleano, que contine la verificacion de si ingreso o no el
+     * cleinte.
      */
     public Boolean ingresarCliente(cCliente datDatos) {
         com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos_Service service = new WsAccesoDatos_Service();
         com.lewissa.jhano.wscAccesoDatos.WsAccesoDatos flag = service.getWsAccesoDatosPort();
         String strSqlIngreso;
         Boolean booFlag = false;
-        cCedula cedCedula=new cCedula(datDatos.getStrIdCliente());
-        cRuc rucRuc=new cRuc(datDatos.getStrIdCliente());
-        cCorreo corCorreo=new cCorreo(datDatos.getStrCorreo());
+        cCedula cedCedula = new cCedula(datDatos.getStrIdCliente());
+        cRuc rucRuc = new cRuc(datDatos.getStrIdCliente());
+        cCorreo corCorreo = new cCorreo(datDatos.getStrCorreo());
         if ((cedCedula.validaCedula() || rucRuc.validaRuc()) && corCorreo.validaEmail()) {
             strSqlIngreso = "INSERT INTO cliente VALUES ('" + datDatos.getStrIdCliente() + "', '" + datDatos.getStrNombreFiscal() + "'"
                     + ", '" + datDatos.getStrNombreComercial() + "', '" + datDatos.getStrDireccion() + "', '" + datDatos.getStrConvencional() + "'"

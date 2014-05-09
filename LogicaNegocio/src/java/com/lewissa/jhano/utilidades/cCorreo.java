@@ -7,6 +7,7 @@ import java.util.regex.Pattern;
 public class cCorreo {
 
     String strCorreo;
+
     /**
      * Método que peermite validar que el correo electronico utiliza los
      * parametro correctos.
@@ -26,6 +27,10 @@ public class cCorreo {
     }
 
     public cCorreo(String strEmail) {
-        strCorreo = strEmail;
+        if (strEmail == null) {
+            strCorreo = "";
+        } else {
+            strCorreo = strEmail;
+        }
     }
 }

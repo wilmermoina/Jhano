@@ -35,6 +35,12 @@ public class cTestValidacionesUtilidades extends TestCase {
         Boolean booFlag = cedCedula.validaCedula();
         assertTrue(booFlag);
     }
+     public void testValidarCedulaNull() {
+
+        cCedula cedCedula = new cCedula(null);
+        Boolean booFlag = cedCedula.validaCedula();
+        assertFalse(booFlag);
+    }
 
     public void testValidarCedulaLetra() {
 

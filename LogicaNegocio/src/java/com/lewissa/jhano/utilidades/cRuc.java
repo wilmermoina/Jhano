@@ -27,6 +27,10 @@ public class cRuc {
      * @param strRc
      */
     public cRuc(String strRc) {
-        strRuc = strRc;
+        if (strRc == null) {
+            strRuc = "";
+        } else {
+            strRuc = strRc;
+        }
     }
 }

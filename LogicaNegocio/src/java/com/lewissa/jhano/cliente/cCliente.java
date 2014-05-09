@@ -1,24 +1,26 @@
 package com.lewissa.jhano.cliente;
 
+import java.beans.*;
+import java.io.Serializable;
+
 /*
  * Esta clase represnta al objeto(tabla) Cliente
  */
-
-
-
 /**
  * Clase cCliente
+ *
  * @author Estaban Borjas, Wilmer Moina.
  * @version 1.0 06-05-2014
  */
-public class cCliente {
+public class cCliente implements Serializable {
+
     private String strIdCliente;
     private String strNombreFiscal;
     private String strNombreComercial;
     private String strDireccion;
     private String strConvencional;
     private String strCelular;
-    private String strCorreo; 
+    private String strCorreo;
     private String strTipoCliente;
 
     /**
@@ -131,5 +133,18 @@ public class cCliente {
      */
     public void setStrTipoCliente(String strTipoCliente) {
         this.strTipoCliente = strTipoCliente;
+    }
+    private final PropertyChangeSupport propertySupport;
+
+    public cCliente() {
+        propertySupport = new PropertyChangeSupport(this);
+    }
+
+    public void addPropertyChangeListener(PropertyChangeListener listener) {
+        propertySupport.addPropertyChangeListener(listener);
+    }
+
+    public void removePropertyChangeListener(PropertyChangeListener listener) {
+        propertySupport.removePropertyChangeListener(listener);
     }
 }

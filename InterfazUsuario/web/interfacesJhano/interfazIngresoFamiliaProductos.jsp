@@ -6,7 +6,6 @@
         <script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
         <link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
     </head>
-
     <body>
         <table bgcolor="#192B75" width="100%" height="50%" border="1">
             <tr>

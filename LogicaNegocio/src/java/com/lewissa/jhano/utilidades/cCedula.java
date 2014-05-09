@@ -75,7 +75,11 @@ public class cCedula {
      * atributo strCedula
      */
     public cCedula(String strCed) {
-        strCedula = strCed;
+        if (strCed == null) {
+            strCedula = "";
+        } else {
+            strCedula = strCed;
+        }
     }
 
 }

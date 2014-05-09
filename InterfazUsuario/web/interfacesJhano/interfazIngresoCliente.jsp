@@ -134,7 +134,7 @@
                 <td width="88%">
                     <font face="Arial">
                         <h3><center>Ingreso de Cliente</center></h3>
-                        <form id="form1" name="form1" method="post" action="">
+                        <form id="formCli" name="formCliente" method="post" action="../controladoresJhano/controladorInterfazIngresoCliente.jsp">
                             <table border="0" align="center">
                                 <tr>
                                     <td><label>CI / RUC:</label></td>
@@ -176,7 +176,7 @@
                                 </tr>
                                 <tr>
                                     <td colspan="2" align="right">
-                                        <input name="guardar" type="button" value="Guardar" />
+                                        <input name="guardar" type="submit" value="Guardar" />
                                         <input name="cancelar" type="button" value="Cancelar" />
                                     </td>
                                 </tr>

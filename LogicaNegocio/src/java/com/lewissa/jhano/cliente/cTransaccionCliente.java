@@ -36,6 +36,8 @@ public class cTransaccionCliente {
                     + ", '" + datDatos.getStrCelular() + "', '" + datDatos.getStrCorreo() + "', '" + datDatos.getStrTipoCliente() + "')";
             booFlag = flag.actualizarDataBase(strSqlIngreso);
         }
+        if(booFlag==null)
+            booFlag=false;
         return booFlag;
     }
 
